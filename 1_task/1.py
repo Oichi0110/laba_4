@@ -22,6 +22,9 @@ class Example:
         self.dm1 = dm1
         self.dm2 = dm2
 
+    def __del__(self):
+        pass
+
     @staticmethod
     def method_1():
         a = 5
@@ -45,6 +48,7 @@ def main():
         print(obj.method_2())
         print(obj.method_3())
         print(obj.method_1())
+        del obj
     else:
         print("Некоректный ввод")
         main()
