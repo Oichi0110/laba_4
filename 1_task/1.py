@@ -24,15 +24,15 @@ class Example:
 
     @staticmethod
     def method_1():
-        #a = input("Переменная a = ")
         a = 5
+        # a = input("Переменная a = ")
         return f"Переменная a = {a}"
 
     def method_2(self):
         return f"Сумма : {self.pem + self.pam}"
 
     def method_3(self):
-        return f"Возведение в степень: {self.dm1**self.dm2}"
+        return f"Возведение в степень: {self.dm1 ** self.dm2}"
 
 
 def main():
@@ -41,10 +41,10 @@ def main():
     if isint(dinam_1) and isint(dinam_2):
         dinam_1 = int(dinam_1)
         dinam_2 = int(dinam_2)
-        Obj = Example(dinam_1, dinam_2)
-        print(Obj.method_2())
-        print(Obj.method_3())
-        print(Obj.method_1())
+        obj = Example(dinam_1, dinam_2)
+        print(obj.method_2())
+        print(obj.method_3())
+        print(obj.method_1())
     else:
         print("Некоректный ввод")
         main()
